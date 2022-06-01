@@ -311,3 +311,30 @@ function dibujarAuto(posX , posY) {
     }
 
 }
+
+//Animar auto
+
+//Dibujar Auto
+
+x = 0;
+dx = 2;
+function animarAuto(posX , posY) {
+    let canvas = document.getElementById("myCanvas");
+    let context = canvas.getContext("2d");
+    let img;
+
+
+    canvas.width = canvas.width;
+
+    img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function () {
+        context.drawImage(img , x , 100);
+    }
+
+    if(x>canvas.width){
+        x = 0;
+    }
+    x = x+dx;
+}
