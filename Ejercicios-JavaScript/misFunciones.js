@@ -289,9 +289,6 @@ function dibujarCuadriculado(){
     ctx.stroke();
     ctx.closePath();
 
-    ctx.beginPath();
-    ctx.font="10pt Verdana";
-
     //EjeY
     ctx.beginPath();
     ctx.moveTo(xMax/2,0);
