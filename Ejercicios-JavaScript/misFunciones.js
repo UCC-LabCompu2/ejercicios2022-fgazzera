@@ -302,19 +302,18 @@ function dibujarCuadriculado(){
 
 //Dibujar Auto
 
-function dibujarAuto(posX,posY){
-    let canvas = document.getElementById("linzoDibujo");
-    let ctx = canvas.getContext("2d");
+function dibujarAuto(posX , posY) {
+    let canvas = document.getElementById("myCanvas");
+    let context = canvas.getContext("2d");
+
     let img;
-
-    canvas.width = canvas.width;
-
     img = new Image();
     img.src = "images/auto.png";
 
-    img.onload = function (){
-        ctx.drawImage(img, posX, posY);
-    }
+    canvas.width = canvas.width;
 
+    img.onload = function () {
+        context.drawImage(img , posX , posY);
+    }
 
 }
