@@ -289,6 +289,9 @@ function dibujarCuadriculado(){
     ctx.stroke();
     ctx.closePath();
 
+    ctx.beginPath();
+    ctx.font="10pt Verdana";
+
     //EjeY
     ctx.beginPath();
     ctx.moveTo(xMax/2,0);
@@ -296,5 +299,25 @@ function dibujarCuadriculado(){
     ctx.strokeStyle = "ff0009";
     ctx.stroke();
     ctx.closePath();
+
+}
+
+
+//Dibujar Auto
+
+function dibujarAuto(posX,posY){
+    let canvas = document.getElementById("linzoDibujo");
+    let ctx = canvas.getContext("2d");
+    let img;
+
+    canvas.width = canvas.width;
+
+    img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function (){
+        ctx.drawImage(img, posX, posY);
+    }
+
 
 }
