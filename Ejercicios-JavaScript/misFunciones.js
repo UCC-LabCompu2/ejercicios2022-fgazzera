@@ -251,52 +251,46 @@ function cargarListener(){
 
 //Dibujar Cuadriculado
 
-function dibujarCuadriculado(){
-    let canvas = document.getElementById("linzoDibujo");
-    let ctx = canvas.getContext("2d");
+function dibujarCuadriculado() {
+    let canvas = document.getElementById("myCanvas");
+    let context = canvas.getContext("2d");
 
-
-    let xMax = canvas.width;
-    let yMax = canvas.height;
-
-    //Dibujar lineas horizontales
-    for(let i=20; i<yMax;){
-        ctx.beginPath();
-        ctx.moveTo(0,i);
-        ctx.lineTo(xMax,i);
-        ctx.strokeStyle = "1b73f8";
-        ctx.stroke();
-        ctx.closePath();
-        i = i+20;
+    for (let i = 20; i < canvas.height; i += 20) {
+        context.beginPath();
+        context.moveTo(0, i);
+        context.lineTo(canvas.width, i);
+        context.lineWidth = 0.5;
+        context.stroke();
+        context.closePath();
     }
 
-    //Dibujar lineas verticales
-    for(let i=20; i<xMax;){
-        ctx.beginPath();
-        ctx.moveTo(i,0);
-        ctx.lineTo(i,yMax);
-        ctx.strokeStyle = "1b73f8";
-        ctx.stroke();
-        ctx.closePath();
-        i = i+20;
+    for (let i = 20; i < canvas.width; i += 20) {
+        context.beginPath();
+        context.moveTo(i, 0);
+        context.lineTo(i, canvas.height);
+        context.lineWidth = 0.5;
+        context.strokeStyle = "#ff0000";
+        context.stroke();
+        context.closePath();
     }
 
-    //EjeX
-    ctx.beginPath();
-    ctx.moveTo(0,yMax/2);
-    ctx.lineTo(xMax,yMax/2);
-    ctx.strokeStyle = "ff0009";
-    ctx.stroke();
-    ctx.closePath();
+    //Eje X
+    context.beginPath();
+    context.moveTo(0, canvas.height / 2);
+    context.lineTo(canvas.width, canvas.height / 2);
+    context.lineWidth = 1;
+    context.strokeStyle = "#000000";
+    context.stroke();
+    context.closePath();
 
-    //EjeY
-    ctx.beginPath();
-    ctx.moveTo(xMax/2,0);
-    ctx.lineTo(xMax/2,yMax);
-    ctx.strokeStyle = "ff0009";
-    ctx.stroke();
-    ctx.closePath();
-
+    //Eje Y
+    context.beginPath();
+    context.moveTo(canvas.width / 2, 0);
+    context.lineTo(canvas.width / 2, canvas.height);
+    context.lineWidth = 1;
+    context.strokeStyle = "#000000";
+    context.stroke();
+    context.closePath();
 }
 
 
