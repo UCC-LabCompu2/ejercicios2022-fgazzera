@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>CV Agustina Aliciardi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
     <style>
         body{
             text-align: center;
             font-family: 'Gugi', cursive;
+            background: linear-gradient(to bottom, #ffffff, #969696, #000000);
         }
         div{
-            border: 2px solid #1f1bff;
-            margin: 10px;
+            border: 2px dashed #ff0000;
+            margin: 10px 20px;
             padding: 5px 30px;
+            background: rgba(0, 0, 255, 0.52);
+            border-radius: 12px;
         }
         img{
             width: 50px;
+            float: left;
+        }
+        div p{
+            text-align: left;
+            margin: 12px;
+        }
+        #nombre_persona{
+            font-family: 'Square Peg', cursive;
         }
     </style>
 </head>
@@ -23,18 +40,18 @@
 
 <div>
     <img src="imagenes/icono_usuario.jpg">
-    <h1>Nombre Alumno</h1>
+    <h1 id="nombre_persona">Nombre Alumno</h1>
     <h2>Ing. en Computacion</h2>
 </div>
 
 <div>
-    <h3>Datos Personales</h3>
+    <h3 class="titulos2">Datos Personales</h3>
     <p><span>Fecha de Nacimiento:</span> dd/mm/aaaa</p>
     <p><span>Email:</span> email@email.com</p>
 </div>
 
 <div>
-    <h3>Formacion Academica</h3>
+    <h3 class="titulos2">Formacion Academica</h3>
     <p><span>Carrera:</span> Ingeniería XXXXX</p>
     <p><span>Universidad:</span> Universidad Católica de Córdoba</p>
     <p><span>Año de Ingreso:</span> 2018</p>
